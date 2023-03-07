@@ -1,0 +1,44 @@
+﻿<Window x:Class="Notepad_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="350" Width="500" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Column="0">
+            <TextBox Width="150" Margin="5,10" 
+                     FontSize="16" 
+                     IsReadOnly="True"
+                     Name="textbox">
+            </TextBox>
+
+            <Button Width="40"  FontSize="16" Height="27" Margin="3" Click="Button_Click">Save
+            </Button>
+            <Label Width="75" Height="27" Margin="3" FontSize="11" Background="LightGray">
+                <CheckBox 
+                    Content="autosave"
+                    Name="AutoSave" 
+                    Checked="AutoSave_Checked"></CheckBox>
+            </Label>
+            <Button Width="40"  FontSize="16" Height="27" Margin="3" Click="Button_Click_1">Cut
+            </Button>
+            <Button Width="40"  FontSize="16" Height="27" Margin="3" Click="Button_Click_2">Copy
+            </Button>
+            <Button Width="40"  FontSize="16" Height="27" Margin="3" Click="Button_Click_3">Paste
+            </Button>
+            <Button Width="68"  FontSize="16" Height="27" Margin="3" Click="Button_Click_4">Select all
+            </Button>
+        </WrapPanel>
+        <TextBox 
+            Grid.Row="1" Name="textboxyazi"
+            FontSize="20" 
+            AcceptsReturn="True" TextWrapping="Wrap"
+            ></TextBox>
+    </Grid>
+</Window>
